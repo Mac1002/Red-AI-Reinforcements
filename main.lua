@@ -1,3 +1,8 @@
+--[[
+Red-AI-Reinforcments V0.1 
+an in development script written by Mac1002.
+]]--
+
 local DEBUG_MODE = true
 local LOOP_INTERVAL = 10 -- in seconds
 
@@ -8,11 +13,11 @@ local function debug(msg)
 end
 
 local function getRedAbs()
-    local redAbs = coalition.getAirbases(2)
-
-    for i, airbase in ipairs(redAbs) do
+    local redAirbases = coalition.getAirbases(1) -- Im an idiot that should read documentation when having issues with this line
+    for i, airbase in ipairs(redAirbases) do
         local abName = Object.getName(airbase)
         debug(abName)
+        debug("Total RED airbases: "..#redAirbases)
     end
 end
 
